@@ -5,7 +5,7 @@ import Avatar from '@material-ui/core/Avatar';
 function SidebarChat() {
   return (
     <div className="sidebarChat">
-      <Avatar></Avatar>
+      <Avatar src="https://avatars.dicebear.com/api/human/kasjdkljadljs.svg"></Avatar>
       <div className="sidebarChat_info">
         <h2>Room Name</h2>
         <p>Last sent message...</p>
