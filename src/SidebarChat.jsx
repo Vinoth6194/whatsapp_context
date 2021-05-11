@@ -1,9 +1,15 @@
 import React from 'react';
 import './SidebarChat.css';
+import Avatar from '@material-ui/core/Avatar';
+
 function SidebarChat() {
   return (
-    <div>
-      <h1>Sidebarchats</h1>
+    <div className="sidebarChat">
+      <Avatar></Avatar>
+      <div className="sidebarChat_info">
+        <h2>Room Name</h2>
+        <p>Last sent message...</p>
+      </div>
     </div>
   );
 }
