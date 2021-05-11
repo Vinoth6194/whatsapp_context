@@ -9,7 +9,13 @@ function SidebarChat({ addNewChat }) {
     setSeed(Math.floor(Math.random() * 5000));
   }, []);
 
-  const createChat = () => {};
+  const createChat = () => {
+    const roomName = prompt('Room Name');
+    if (roomName) {
+      console.log('Room Name');
+      console.log(roomName);
+    }
+  };
 
   return !addNewChat ? (
     <div className="sidebarChat">
@@ -22,7 +28,7 @@ function SidebarChat({ addNewChat }) {
       </div>
     </div>
   ) : (
-    <div className="sidebarCh" onClick={createChat}>
+    <div className="sidebarChat" onClick={createChat}>
       <h2>Add New Chat</h2>
     </div>
   );
