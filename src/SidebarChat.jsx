@@ -21,7 +21,7 @@ function SidebarChat({ addNewChat, id, name }) {
           setSideMessages(snapshot.docs.map(doc => doc.data()))
         );
     }
-  }, []);
+  }, [id]);
 
   const createChat = () => {
     const roomName = prompt('Room Name');
