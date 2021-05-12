@@ -89,3 +89,8 @@
 .chat__footer > form > button {
   display: none;
 }
+
+.chat__footer .MuiSvgIcon-root {
+  color: gray;
+  padding: 10px;
+}
