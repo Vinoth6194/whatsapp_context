@@ -17,12 +17,16 @@ function Chat() {
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
   }, []);
-
+  //*roomId is captured from the url
+  //*Runs based on roomId for eachroom and set the roomName
   useEffect(() => {
     if (roomId) {
       db.collection('rooms')
         .doc(roomId)
-        .onSnapshot(snapshot => console.log(snapshot.data()));
+        .onSnapshot(
+          snapshot => setRoomName(snapshot.data().name)
+          // console.log(snapshot.data())
+        );
     }
   }, [roomId]);
 
@@ -39,7 +43,7 @@ function Chat() {
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className="chat__headerinfo">
           {/* <h2>Room name</h2> */}
-          <h2>RoomName</h2>
+          <h2>{roomName}</h2>
           <p>Last seen...</p>
         </div>
         <div className="chat__headerRight">
