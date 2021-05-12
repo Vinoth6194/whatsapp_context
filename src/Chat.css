@@ -11,3 +11,12 @@
   flex: 1;
   padding-left: 20px;
 }
+
+.chat__headerinfo > h2 {
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.chat__headerinfo > p {
+  color: gray;
+}
