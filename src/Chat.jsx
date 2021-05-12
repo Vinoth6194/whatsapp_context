@@ -8,10 +8,19 @@ import InsertEmoticonOutlinedIcon from '@material-ui/icons/InsertEmoticonOutline
 import MicNoneOutlinedIcon from '@material-ui/icons/MicNoneOutlined';
 function Chat() {
   const [seed, setSeed] = useState('');
+  const [input, setInput] = useState('');
 
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
   }, []);
+
+  const sendMessage = e => {
+    e.preventDefault();
+    console.log('Your message is');
+    // console.log(e);
+    console.log(input);
+  };
+
   return (
     <div className="chat">
       <div className="chat__header">
@@ -45,8 +54,15 @@ function Chat() {
       <div className="chat__footer">
         <InsertEmoticonOutlinedIcon />
         <form>
-          <input type="text" placeholder="Type a message" />
-          <button>Send a Messsage</button>
+          <input
+            type="text"
+            placeholder="Type a message"
+            value={input}
+            onChange={e => setInput(e.target.value)}
+          />
+          <button type="submit" onClick={sendMessage}>
+            Send a Messsage
+          </button>
         </form>
         <MicNoneOutlinedIcon />
       </div>
