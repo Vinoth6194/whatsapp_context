@@ -86,3 +86,6 @@
   border: none;
   padding: 10px;
 }
+.chat__footer > form > button {
+  display: none;
+}

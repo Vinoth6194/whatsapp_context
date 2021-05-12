@@ -45,7 +45,7 @@ function Chat() {
       <div className="chat__footer">
         <InsertEmoticonOutlinedIcon />
         <form>
-          <input type="text" />
+          <input type="text" placeholder="Type a message" />
           <button>Send a Messsage</button>
         </form>
         <MicNoneOutlinedIcon />
