@@ -6,9 +6,12 @@ import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import InsertEmoticonOutlinedIcon from '@material-ui/icons/InsertEmoticonOutlined';
 import MicNoneOutlinedIcon from '@material-ui/icons/MicNoneOutlined';
+import { useParams } from 'react-router-dom';
+
 function Chat() {
   const [seed, setSeed] = useState('');
   const [input, setInput] = useState('');
+  const { roomId } = useParams();
 
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
