@@ -36,3 +36,12 @@
   padding: 30px;
   overflow: scroll;
 }
+
+.chat__message {
+  background-color: #ffffff;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
