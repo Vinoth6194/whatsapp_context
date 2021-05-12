@@ -20,3 +20,9 @@
 .chat__headerinfo > p {
   color: gray;
 }
+.chat__headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100px;
+}
