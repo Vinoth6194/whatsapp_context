@@ -70,13 +70,15 @@ function Chat() {
       {console.log('Messages')}
       {console.log(messages)}
       <div className="chat__body">
-        <div className={`chat__mesaage ${true && 'chat__reciever'}`}>
-          <span className="chat__name">Vinoth</span>
-          <p>
-            Hey Vinoth
-            <span className="chat__timestamp">5.27PM</span>
+        {messages.map(message => (
+          <p className={`chat__mesaage ${true && 'chat__reciever'}`}>
+            <span className="chat__name">{message.name}</span>
+            {message.message}
+            <span className="chat__timestamp">
+              {new Date(message.timestamp?.toDate()).toUTCString()}
+            </span>
           </p>
-        </div>
+        ))}
       </div>
       <div className="chat__footer">
         <InsertEmoticonOutlinedIcon />
@@ -98,3 +100,7 @@ function Chat() {
 }
 
 export default Chat;
+
+<div>
+  <p>Hey Vinoth</p>
+</div>;
