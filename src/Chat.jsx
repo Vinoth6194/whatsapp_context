@@ -32,7 +32,7 @@ function Chat() {
       </div>
 
       <div className="chat__body">
-        <div className="chat__message">
+        <div className={`chat__mesaage ${true && 'chat__reciever'}`}>
           <span className="chat__name">Vinoth</span>
           <p>
             Hey Vinoth
