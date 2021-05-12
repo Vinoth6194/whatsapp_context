@@ -67,3 +67,11 @@
   margin-bottom: 30px;
   width: fit-content;
 }
+
+.chat__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  border-radius: 1px solid lightgray;
+}
