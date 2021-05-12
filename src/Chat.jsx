@@ -16,7 +16,7 @@ function Chat() {
   const [roomName, setRoomName] = useState();
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
-  }, []);
+  }, [roomId]);
   //*roomId is captured from the url
   //*Runs based on roomId for eachroom and set the roomName
   useEffect(() => {
