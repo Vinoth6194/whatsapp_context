@@ -12,24 +12,25 @@ function Chat() {
   }, []);
   return (
     <div className="chat">
-      <div className="div chat__header">
+      <div className="chat__header">
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
+        <div className="chat__headerinfo">
+          <h2>Room name</h2>
+          <p>Last seen...</p>
+        </div>
+        <div className="chat__headerRight">
+          <IconButton>
+            <SearchOutlinedIcon />
+          </IconButton>
+          <IconButton>
+            <AttachFileOutlinedIcon />
+          </IconButton>
+          <IconButton>
+            <MoreVertOutlinedIcon />
+          </IconButton>
+        </div>
       </div>
-      <div className="chat__headerinfo">
-        <h2>Room name</h2>
-        <p>Last seen...</p>
-      </div>
-      <div className="chat__headerRight">
-        <IconButton>
-          <SearchOutlinedIcon />
-        </IconButton>
-        <IconButton>
-          <AttachFileOutlinedIcon />
-        </IconButton>
-        <IconButton>
-          <MoreVertOutlinedIcon />
-        </IconButton>
-      </div>
+
       <div className="div chat__body"></div>
       <div className="chat__footer"></div>
     </div>
