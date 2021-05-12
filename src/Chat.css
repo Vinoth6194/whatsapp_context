@@ -46,3 +46,9 @@
   margin-bottom: 30px;
   width: fit-content;
 }
+.chat__name {
+  position: absolute;
+  top: 0px;
+  font-weight: 800;
+  font-size: xx-small;
+}

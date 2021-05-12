@@ -33,6 +33,7 @@ function Chat() {
 
       <div className="chat__body">
         <div className="chat__message">
+          <span className="chat__name">Vinoth</span>
           <p>Hey Vinoth</p>
         </div>
       </div>
