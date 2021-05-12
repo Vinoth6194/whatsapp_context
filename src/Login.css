@@ -18,3 +18,10 @@
   object-fit: contain;
   margin-bottom: 50px;
 }
+
+.login__container > button {
+  color: white;
+  margin-top: 50px;
+  text-transform: inherit !important;
+  background-color: #0a8d48;
+}
