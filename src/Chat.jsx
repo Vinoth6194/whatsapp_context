@@ -14,6 +14,7 @@ function Chat() {
   const [input, setInput] = useState('');
   const { roomId } = useParams();
   const [roomName, setRoomName] = useState();
+  const [messages, setMessages] = useState([]);
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
   }, [roomId]);
@@ -26,6 +27,14 @@ function Chat() {
         .onSnapshot(
           snapshot => setRoomName(snapshot.data().name)
           // console.log(snapshot.data())
+        );
+
+      db.collection('rooms')
+        .doc(roomId)
+        .collection('messages')
+        .orderBy('timestamp', 'asc')
+        .onSnapshot(snapshot =>
+          setMessages(snapshot.docs.map(doc => doc.data()))
         );
     }
   }, [roomId]);
@@ -58,7 +67,8 @@ function Chat() {
           </IconButton>
         </div>
       </div>
-
+      {console.log('Messages')}
+      {console.log(messages)}
       <div className="chat__body">
         <div className={`chat__mesaage ${true && 'chat__reciever'}`}>
           <span className="chat__name">Vinoth</span>
