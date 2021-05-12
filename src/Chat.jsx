@@ -4,6 +4,8 @@ import './Chat.css';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
+import InsertEmoticonOutlinedIcon from '@material-ui/icons/InsertEmoticonOutlined';
+import MicNoneOutlinedIcon from '@material-ui/icons/MicNoneOutlined';
 function Chat() {
   const [seed, setSeed] = useState('');
 
@@ -40,7 +42,14 @@ function Chat() {
           </p>
         </div>
       </div>
-      <div className="chat__footer"></div>
+      <div className="chat__footer">
+        <InsertEmoticonOutlinedIcon />
+        <form>
+          <input type="text" />
+          <button>Send a Messsage</button>
+        </form>
+        <MicNoneOutlinedIcon />
+      </div>
     </div>
   );
 }
