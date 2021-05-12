@@ -13,3 +13,8 @@
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
+.login__container > img {
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 50px;
+}
