@@ -75,7 +75,7 @@ function Chat() {
             <span className="chat__name">{message.name}</span>
             {message.message}
             <span className="chat__timestamp">
-              {new Date(message.timestamp?.toDate()).toUTCString()}
+              {new Date(message.timestamp?.toDate()).toLocaleString()}
             </span>
           </p>
         ))}
